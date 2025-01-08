@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Financial Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="logo(1).png" alt="Laxmi Mitra">
+            </div>
+        </a>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="Entrepreneurs.html">Entrepreneurs</a></li>
+                    <li><a href="#savings">Savings</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                </ul>
+            </div>
+            <div class="side-menu">
+                <button class="signup">Sign Up</button>
+                <div class="language-dropdown">
+                    <button class="language-toggle">
+                        <i class="fa-solid fa-language"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">English</a></li>
+                        <li><a href="hindi.html">Hindi</a></li>
+                        <li><a href="#">Tamil</a></li>
+                        <li><a href="#">Telugu</a></li>
+                        <li><a href="#">Kannada</a></li>
+                        <li><a href="#">Urdu</a></li>
+                        <li><a href="#">Gujarati</a></li>
+                        <li><a href="#">Malayalam</a></li>
+                    </ul>
+                </div>
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="education">
+            <h1>Personalized Financial Education</h1>
+
+            <!-- Story-Based Learning Section -->
+            <div id="story-based">
+                <h2>Story-Based Learning</h2>
+                <h4>Real-life narratives simplify financial concepts, enhanced by Generative AI for tailored and relatable content.</h4>
+                <div class="card-container">
+                    <div class="card" style="background-image: url('c1.jpg');">
+                        <div class="overlay">
+                            <p>Learn financial basics through engaging and relatable stories.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c2.jpg');">
+                        <div class="overlay">
+                            <p>Understand savings with simple yet impactful storytelling.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c3.jpg');">
+                        <div class="overlay">
+                            <p>Explore investment concepts in an intuitive, story-driven way.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c4.jpg');">
+                        <div class="overlay">
+                            <p>Learn about budgeting with inspiring real-life examples.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn">Next</button>
+            </div>
+
+            <!-- Simplified Courses Section -->
+            <div id="simplified-courses">
+                <h2>Simplified Courses</h2>
+                <h4>Easy-to-understand modules with visual aids, supported by NLP for multilingual accessibility across India.</h4>
+                <div class="card-container">
+                    <div class="card" style="background-image: url('c5.jpg');">
+                        <div class="overlay">
+                            <p>Master simple banking operations with this beginner-friendly module.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c6.jpg');">
+                        <div class="overlay">
+                            <p>Understand digital payments step by step.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c7.jpg');">
+                        <div class="overlay">
+                            <p>Learn to manage loans efficiently.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c8.jpg');">
+                        <div class="overlay">
+                            <p>Get introduced to investment options with ease.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn">Next</button>
+            </div>
+
+            <!-- Fraud Awareness Training Section -->
+            <div id="fraud-awareness">
+                <h2>Fraud Awareness Training</h2>
+                <h4>Focused modules on identifying scams and promoting safe financial practices.</h4>
+                <div class="card-container">
+                    <div class="card" style="background-image: url('c9.png');">
+                        <div class="overlay">
+                            <p>Learn how to recognize phishing scams.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c10.jpg');">
+                        <div class="overlay">
+                            <p>Understand secure online banking practices.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c11.jpg');">
+                        <div class="overlay">
+                            <p>Detect fraudulent schemes with these essential tips.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url('c12.png');">
+                        <div class="overlay">
+                            <p>Learn to verify financial documents effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn">Next</button>
+            </div>
+        </section>
+        <div class="chatbot-icon" onclick="toggleChat()">💬</div>
+
+    <div class="chat-section">
+      <span class="close-button" onclick="closeChat()">×</span>
+      <div class="chat-messages">
+        <div class="chat-message chat-message-bot">
+          Hi, I am the Mitra Chat. How may I help you today?
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message..." />
+        <button>Send</button>
+      </div>
+    </div>
+
+    <script>
+      function toggleChat() {
+        const chatSection = document.querySelector(".chat-section");
+        chatSection.style.display =
+          chatSection.style.display === "none" ? "block" : "none";
+      }
+
+      function closeChat() {
+        const chatSection = document.querySelector(".chat-section");
+        chatSection.style.display = "none";
+      }
+    </script>
+    </main>
+</body>
+
+</html>

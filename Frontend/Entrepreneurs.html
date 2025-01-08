@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Tools for Entrepreneurs</title>
+    <link rel="stylesheet" href="entrepreneurs.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+        <div class="logo">
+            <img src="logo(1).png" alt="Laxmi Mitra">
+        </div>
+    </a>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="Entrepreneurs.html">Entrepreneurs</a></li>
+                <li><a href="#savings">Savings</a></li>
+                <li><a href="#stories">Stories</a></li>
+            </ul>
+        </div>
+        <div class="side-menu">
+            <button class="signup">Sign Up</button>
+            <div class="language-dropdown">
+                <button class="language-toggle">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">English</a></li>
+                    <li><a href="hindi.html">Hindi</a></li>
+                    <li><a href="#">Tamil</a></li>
+                    <li><a href="#">Telugu</a></li>
+                    <li><a href="#">Kannada</a></li>
+                    <li><a href="#">Urdu</a></li>
+                    <li><a href="#">Gujarati</a></li>
+                    <li><a href="#">Malayalam</a></li>
+                </ul>
+            </div>
+            <div class="user-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+    <main>
+        <!-- Business Planning Section -->
+        <section id="business-planning">
+            <h1>Business Planning</h1>
+            <p>AI-generated plans with cost analysis and profit projections tailored to your individual goals.</p>
+            <form class="planning-form">
+                <label for="business-type">Business Type:</label>
+                <input type="text" id="business-type" placeholder="e.g., Dairy, Craft, etc.">
+
+                <label for="budget">Budget:</label>
+                <input type="number" id="budget" placeholder="Enter your budget in ₹">
+
+                <label for="timeline">Timeline (months):</label>
+                <input type="number" id="timeline" placeholder="e.g., 6, 12, etc.">
+
+                <button type="submit" class="generate-plan-btn">Generate Plan</button>
+            </form>
+            <div class="plan-display">
+                <h2>Your Plan</h2>
+                <p>Cost Analysis: ₹50,000</p>
+                <p>Projected Profit: ₹1,20,000</p>
+                <p>Recommendations: Focus on cost reduction and long-term growth.</p>
+                <button class="download-btn">Download as PDF</button>
+            </div>
+        </section>
+
+        <!-- Micro-Investment Portal Section -->
+        <section id="investment-portal">
+            <h1>Micro-Investment Portal</h1>
+            <p>Explore AI-recommended investment opportunities for steady financial growth.</p>
+            <div class="investment-cards">
+                <div class="card" style="background-image: url('i1.png');">
+                    <div class="overlay">
+                        <p>Mutual Fund A: Low Risk, 8% ROI.</p>
+                    </div>
+                </div>
+                <div class="card" style="background-image: url('i2.jpg');">
+                    <div class="overlay">
+                        <p>Fixed Deposit: 6.5% ROI, Guaranteed Returns.</p>
+                    </div>
+                </div>
+                <div class="card" style="background-image: url('i3.jpg');">
+                    <div class="overlay">
+                        <p>Real Estate Fund: Medium Risk, High Growth.</p>
+                    </div>
+                </div>
+                <div class="card" style="background-image: url('i4.jpg');">
+                    <div class="overlay">
+                        <p>Gold Investment: Stable and Reliable Returns.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn">Next</button>
+        </section>
+
+        <!-- Funding Platform Section -->
+<section id="funding-platform">
+  <h1>Funding Platform</h1>
+  <p>Support entrepreneurs with secure funding options and meaningful rewards.</p>
+  <div class="funding-cards">
+      <!-- Card 1: Government Schemes -->
+      <div class="card" style="background-image: url('f1.jpg');">
+          <div class="overlay">
+              <p>Government Schemes, startup funding, Mudra Yojana and other initiatives.</p>
+          </div>
+      </div>
+
+      <!-- Card 2: Private Bank Loan -->
+      <div class="card" style="background-image: url('f2.jpg');">
+          <div class="overlay">
+              <p>Private Bank Loans and Schemes</p>
+          </div>
+      </div>
+
+      <!-- Card 3: Private Company Funding -->
+      <div class="card" style="background-image: url('f3.jpg');">
+          <div class="overlay">
+              <p>Private Company Funding and charity organizations for business growth.</p>
+          </div>
+      </div>
+  </div>
+  <button class="next-btn">Next</button>
+</section>
+
+        <div class="chatbot-icon" onclick="toggleChat()">💬</div>
+
+    <div class="chat-section">
+      <span class="close-button" onclick="closeChat()">×</span>
+      <div class="chat-messages">
+        <div class="chat-message chat-message-bot">
+          Hi, I am the Mitra Chat. How may I help you today?
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message..." />
+        <button>Send</button>
+      </div>
+    </div>
+
+    <script>
+      function toggleChat() {
+        const chatSection = document.querySelector(".chat-section");
+        chatSection.style.display =
+          chatSection.style.display === "none" ? "block" : "none";
+      }
+
+      function closeChat() {
+        const chatSection = document.querySelector(".chat-section");
+        chatSection.style.display = "none";
+      }
+    </script>
+    </main>
+</body>
+
+</html>

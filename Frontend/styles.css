@@ -1,0 +1,737 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #c6b8ff, #f4f0c8, #fbbecf );
+}
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 10px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+a{
+  text-decoration: none;
+}
+
+/* Logo Styling */
+header .logo img {
+  height: 5.5rem; /* Adjust logo height */
+  width: 8rem; /* Maintain aspect ratio */
+  /* display: block; Ensure proper spacing */
+}
+
+/* Center Menu */
+header nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  gap: 10rem;
+}
+
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2F4F4F;
+  transition: color 0.3s;
+}
+
+header nav ul li:hover {
+  color: purple;
+  transform: scale(1.2);
+}
+
+/* Side Menu */
+.side-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Sign Up Button */
+header .signup {
+  background: #ff93dd;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cta{
+  background: #ff93dd;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin:1rem;
+}
+
+.cta:hover{
+  transform: scale(1.3);
+  background-color: purple;
+  color: #fff;
+}
+header .signup:hover {
+  transform: scale(1.2);
+  background-color: purple;
+  color: #fff;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+  position: relative;
+}
+
+.language-toggle {
+  background: #ff93dd;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.language-toggle:hover {
+  transform: scale(1.3);
+  background-color: purple;
+  color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 110%; /* Below the button */
+  right: 0;
+  display: none; /* Initially hidden */
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #2F4F4F;
+  font-weight: bold;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  color: purple;
+  background: rgba(255, 147, 221, 0.2);
+}
+
+/* Show Dropdown on Hover */
+.language-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.user-icon i {
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+  background-color: white;
+  border-radius: 50%;
+  color: purple;
+  padding: 5px;
+}
+
+.user-icon:hover {
+  transform: scale(1.3);
+  border-radius: 50%;
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Initial Styles for Animations */
+header {
+  animation: dropIn 1s ease-in-out;
+}
+
+.hero-content h1 {
+  opacity: 0;
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.hero-images img {
+  opacity: 0;
+  animation: slideInRight 1s ease-in-out forwards;
+}
+
+
+/* Hero Section */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 5em;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: purple;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .cta {
+  background: #f48282;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.hero-content .cta:hover {
+  transform: scale(1.1);
+}
+
+.hero-images {
+  flex: 1;
+  
+}
+
+.hero-images img{
+  height: 20rem;
+  width: 25rem;
+}
+
+/* Centered Sections */
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+/* Section Heading */
+.centered-section h2 {
+  font-size: 2rem;
+  color: #c1204b;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* General Card Styles */
+.features .card {
+  width: 18rem;
+  height: 15rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay on Hover */
+.features .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Initially transparent */
+  transition: background 0.3s;
+}
+
+.card:hover::before {
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+}
+
+/* Heading and Text Effects */
+.card h3 {
+  position: absolute;
+  bottom: -1rem; /* Position below the card */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Above the overlay */
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s, bottom 0.3s;
+}
+
+.card p {
+  opacity: 0; /* Initially hidden */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Above the overlay */
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.card:hover h3 {
+  bottom: 50%; /* Move to center of the card */
+  transform: translate(-50%, -50%);
+  color: #fec0ea;
+}
+
+.card:hover p {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+/* Individual Card Backgrounds for Education Section */
+.story-based {
+  background-image: url('bg3.jpg');
+}
+
+.simplified-courses {
+  background-image: url('bg4.jpg');
+}
+
+.fraud-awareness {
+  background-image: url('bg5.jpg');
+}
+
+
+
+/* Stories Section */
+#stories {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#stories h2 {
+  font-size: 2.5rem;
+  color: purple;
+  margin-bottom: 30px;
+}
+
+.carousel_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 35rem;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.side {
+  height: 12rem;
+  width: 10rem;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+.C_card {
+  flex: 0 0 35rem;
+  height: 25rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.card__background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+
+.card__content--container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.card__title{
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #f7b7d6 !important;
+  position: relative;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 0;
+  bottom: -10px;
+  left: 0;
+  background-color: hsl(46, 100%, 50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.card__description {
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-align: left;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Hover Effects */
+.C_card:hover .card__background {
+  transform: scale(1.2);
+}
+
+.C_card:hover .card__content {
+  transform: translateY(0);
+}
+
+.C_card:hover .card__title::after {
+  width: 50%;
+}
+
+.C_card:hover .card__description {
+  opacity: 1;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 50%;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+
+/* Chatbot Icon */
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4CAF50; 
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Chat Section */
+.chat-section {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 15rem;
+  height: 15rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; 
+  overflow-y: auto; 
+}
+
+.chat-messages {
+  padding: 10px;
+  height: calc(100% - 50px); /* Adjust for input area */
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.chat-message-bot {
+  text-align: left;
+  background-color: #e6e6e6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 10px; 
+}
+
+.chat-message-user {
+  text-align: right;
+  background-color: #DCFDF7;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px; 
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.chat-input button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #f48282, #e8e2ff);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.5rem;
+  color: #000;
+}
+
+
+
+/* Main Education Section */
+#education h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #c1204b;
+  margin: 20px 0;
+}
+#education{
+  margin: 1.5rem;
+}
+
+#education h2 {
+  font-size: 2rem;
+  color: purple;
+  margin: 20px 0;
+  text-align: left;
+}
+
+#education p {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  gap: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 18rem;
+  height: 12rem;
+  border-radius: 10%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card .overlay p {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Next Button */
+.next-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: #ff93dd;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.next-btn:hover {
+  transform: scale(1.1);
+  background-color: #f48282;
+}
